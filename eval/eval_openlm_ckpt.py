@@ -46,8 +46,12 @@ def evaluate(model, tokenizer, cfg):
 
     composer_model = SimpleComposerOpenLMCausalLM(model, tokenizer)
 
+    # evaluators, logger_keys = build_icl_evaluators(
+    #     cfg.icl_tasks, tokenizer, cfg.max_seq_len, cfg.device_eval_batch_size
+    # )
+    icl_tasks = [dict(cfg.icl_tasks[0])]
     evaluators, logger_keys = build_icl_evaluators(
-        cfg.icl_tasks, tokenizer, cfg.max_seq_len, cfg.device_eval_batch_size
+        icl_tasks, tokenizer, cfg.max_seq_len, cfg.device_eval_batch_size
     )
 
     in_memory_logger = InMemoryLogger()  # track metrics in the in_memory_logger
@@ -65,7 +69,7 @@ def evaluate(model, tokenizer, cfg):
         model=composer_model,
         loggers=loggers,
         precision=cfg.precision,
-        fsdp_config=fsdp_config,  # type: ignore
+        # fsdp_config=fsdp_config,  # type: ignore
         load_path=load_path,
         load_weights_only=True,
         progress_bar=False,
