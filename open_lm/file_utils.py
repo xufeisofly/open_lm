@@ -431,7 +431,9 @@ def _single_epoch_string(
             for i in range(num_sources):
                 # Add shards incrementally
                 print(f"======={i}, next_shard_per_source={next_shard_per_source[i]}, "
+                      f"shard_list_per_source={shard_list_per_source[i]}, "
                       f"starting_shard_per_source={starting_shard_per_source[i]}, "
+                      f"total_num_workers={total_num_workers}, "
                       f"total_shards_per_source={len(manifests[i])}=======")
                 shard_name = manifests[i][next_shard_per_source[i]]["shard"]
                 try:
