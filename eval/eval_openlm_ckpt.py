@@ -69,7 +69,7 @@ def evaluate(model, tokenizer, cfg):
         model=composer_model,
         loggers=loggers,
         precision=cfg.precision,
-        fsdp_config=fsdp_config,  # type: ignore
+        # fsdp_config=fsdp_config,  # type: ignore
         load_path=load_path,
         load_weights_only=True,
         progress_bar=False,
