@@ -309,7 +309,7 @@ def train_one_epoch(
                 loss_str = f"Loss: {losses_m.avg:.3f}"
                 loss_str += f" LB-Loss: {load_balancing_losses_m.avg:.3f}" if args.moe_freq > 0 else ""
                 logging.info(
-                    f"Train Epoch: {epoch} [{num_samples:>{sample_digits}}/{samples_per_epoch} ({percent_complete:.0f}%)] "
+                    f"Train Epoch: {epoch} Step: {step} [{num_samples:>{sample_digits}}/{samples_per_epoch} ({percent_complete:.0f}%)] "
                     f"{loss_str} "
                     f"Data (t): {data_time_m.avg:.3f} "
                     f"Batch (t): {batch_time_m.avg:.3f}, {samples_per_second:#g}/s, {samples_per_second_per_gpu:#g}/s/gpu "
