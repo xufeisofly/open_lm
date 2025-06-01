@@ -68,7 +68,7 @@ def main():
     open_lm = OpenLMforCausalLM(OpenLMConfig(create_params(args)))
 
     if "gpt-neox-20b" in args.tokenizer:
-        tokenizer = GPTNeoXTokenizerFast.from_pretrained("EleutherAI/gpt-neox-20b")
+        tokenizer = GPTNeoXTokenizerFast.from_pretrained(args.tokenizer)
     elif "llama" in args.tokenizer:
         tokenizer = LlamaTokenizerFast.from_pretrained(args.tokenizer)
     else:
