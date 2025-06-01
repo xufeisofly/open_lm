@@ -26,3 +26,4 @@ wikipedia
 ipython
 mosaicml
 torchvision==0.18.1
+llm-foundry==0.9.0
