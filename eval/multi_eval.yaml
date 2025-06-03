@@ -74,6 +74,7 @@ icl_tasks:
     dataset_uri: local_data/jeopardy_all.jsonl # ADD YOUR OWN DATASET URI
     num_fewshot: [0]
     icl_task_type: language_modeling
+    continuation_delimiter: 'Answer: '
     has_categories: true
   # - label: Winograd
   #   dataset_uri: local_data/winograd_wsc.jsonl # ADD YOUR OWN DATASET URI
