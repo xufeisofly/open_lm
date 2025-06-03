@@ -50,7 +50,9 @@ def evaluate(model, tokenizer, cfg):
     #     cfg.icl_tasks, tokenizer, cfg.max_seq_len, cfg.device_eval_batch_size
     # )
     icl_tasks = [dict(t) for t in cfg.icl_tasks]
-    print('======', cfg.get('generation_kwargs', {}))
+    for icl_cfg in icl_tasks:
+        print('======', icl_cfg.get('generation_kwargs', {}))
+
     evaluators, logger_keys = build_icl_evaluators(
         icl_tasks, tokenizer, cfg.max_seq_len, cfg.device_eval_batch_size
     )
