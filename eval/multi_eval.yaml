@@ -70,16 +70,17 @@ icl_tasks:
     num_fewshot: [0]
     icl_task_type: language_modeling
     has_categories: false
-    context_key: context_options
+    generation_kwargs:
+      context_key: context_options
   # - label: Jeopardy
   #   dataset_uri: local_data/jeopardy_all.jsonl # ADD YOUR OWN DATASET URI
   #   num_fewshot: [0]
   #   icl_task_type: language_modeling
-  #   continuation_delimiter: 'Answer: '
   #   has_categories: true
   - label: Winograd #???
     dataset_uri: local_data/winograd_wsc.jsonl # ADD YOUR OWN DATASET URI
     num_fewshot: [0]
     icl_task_type: language_modeling
     has_categories: false
-    context_key: context_options
+    generation_kwargs:
+      context_key: context_options
