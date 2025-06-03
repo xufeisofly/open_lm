@@ -29,64 +29,55 @@ fsdp_config:
 
 
 icl_tasks:
--
-  label: arc_easy
-  dataset_uri: local_data/arc_easy.jsonl # ADD YOUR OWN DATASET URI
-  num_fewshot: [0]
-  icl_task_type: multiple_choice
-  continuation_delimiter: 'Answer: ' # this separates questions from answers
-  has_categories: false
--
-  label: arc_challenge
+#- label: arc_easy
+#  dataset_uri: local_data/arc_easy.jsonl # ADD YOUR OWN DATASET URI
+#  num_fewshot: [0]
+#  icl_task_type: multiple_choice
+#  continuation_delimiter: 'Answer: ' # this separates questions from answers
+#  has_categories: false
+- label: arc_challenge
   dataset_uri: local_data/arc_challenge.jsonl # ADD YOUR OWN DATASET URI
   num_fewshot: [0]
   icl_task_type: multiple_choice
   continuation_delimiter: 'Answer: ' # this separates questions from answers
   has_categories: false
--
-  label: boolq
+- label: boolq
   dataset_uri: local_data/boolq.jsonl # ADD YOUR OWN DATASET URI
   num_fewshot: [0]
   icl_task_type: multiple_choice
   continuation_delimiter: 'Answer: ' # this separates questions from answers
   has_categories: false
--
-  label: hellaswag
+- label: hellaswag
   dataset_uri: local_data/hellaswag.jsonl # ADD YOUR OWN DATASET URI
   num_fewshot: [0]
   icl_task_type: multiple_choice
   continuation_delimiter: 'Answer: ' # this separates questions from answers
   has_categories: false
--
-  label: lambada_openai
+- label: lambada_openai
   dataset_uri: local_data/lambada_openai.jsonl # ADD YOUR OWN DATASET URI
   num_fewshot: [0]
   icl_task_type: language_modeling
   continuation_delimiter: 'Answer: ' # this separates questions from answers
   has_categories: false
--
-  label: piqa
+- label: piqa
   dataset_uri: local_data/piqa.jsonl # ADD YOUR OWN DATASET URI
   num_fewshot: [0]
   icl_task_type: multiple_choice
   continuation_delimiter: 'Answer: ' # this separates questions from answers
   has_categories: false
--
-  label: winogrande
+- label: winogrande
   dataset_uri: local_data/winogrande.jsonl # ADD YOUR OWN DATASET URI
   num_fewshot: [0]
   icl_task_type: language_modeling
   continuation_delimiter: 'Answer: ' # this separates questions from answers
   has_categories: false
--
-  label: Jeopardy
+- label: Jeopardy
   dataset_uri: local_data/jeopardy_all.jsonl # ADD YOUR OWN DATASET URI
   num_fewshot: [0]
   icl_task_type: language_modeling
   continuation_delimiter: 'Answer: ' # this separates questions from answers
   has_categories: true
--
-  label: Winograd
+- label: Winograd
   dataset_uri: local_data/winograd_wsc.jsonl # ADD YOUR OWN DATASET URI
   num_fewshot: [0]
   icl_task_type: language_modeling
