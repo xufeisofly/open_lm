@@ -38,7 +38,7 @@ def setup_for_distributed(is_master):
 
 @torch.no_grad()
 def evaluate(model, tokenizer, cfg):
-    cfg.dist_timeout = cfg.get("dist_timeout", 600.0)
+    cfg.dist_timeout = cfg.get("dist_timeout", 60.0)
 
     reproducibility.seed_all(cfg.seed)
     dist.initialize_dist(get_device(None), timeout=cfg.dist_timeout)
