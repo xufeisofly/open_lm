@@ -70,15 +70,15 @@ icl_tasks:
   #   num_fewshot: [0]
   #   icl_task_type: language_modeling
   #   has_categories: false
-  - label: Jeopardy
-    dataset_uri: local_data/jeopardy_all.jsonl # ADD YOUR OWN DATASET URI
-    num_fewshot: [0]
-    icl_task_type: language_modeling
-    continuation_delimiter: 'Answer: '
-    has_categories: true
-  # - label: Winograd
-  #   dataset_uri: local_data/winograd_wsc.jsonl # ADD YOUR OWN DATASET URI
+  # - label: Jeopardy
+  #   dataset_uri: local_data/jeopardy_all.jsonl # ADD YOUR OWN DATASET URI
   #   num_fewshot: [0]
   #   icl_task_type: language_modeling
-  #   continuation_delimiter: 'Answer: ' # this separates questions from answers
-  #   has_categories: false
+  #   continuation_delimiter: 'Answer: '
+  #   has_categories: true
+  - label: Winograd
+    dataset_uri: local_data/winograd_wsc.jsonl # ADD YOUR OWN DATASET URI
+    num_fewshot: [0]
+    icl_task_type: language_modeling
+    continuation_delimiter: 'Answer: ' # this separates questions from answers
+    has_categories: false
