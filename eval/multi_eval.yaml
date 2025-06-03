@@ -59,18 +59,17 @@ icl_tasks:
   #   icl_task_type: language_modeling
   #   continuation_delimiter: 'Answer: ' # this separates questions from answers
   #   has_categories: false
-  - label: piqa
-    dataset_uri: local_data/piqa.jsonl # ADD YOUR OWN DATASET URI
-    num_fewshot: [0]
-    icl_task_type: multiple_choice
-    continuation_delimiter: 'Answer: ' # this separates questions from answers
-    has_categories: false
-  # - label: winogrande
-  #   dataset_uri: local_data/winogrande.jsonl # ADD YOUR OWN DATASET URI
+  # - label: piqa
+  #   dataset_uri: local_data/piqa.jsonl # ADD YOUR OWN DATASET URI
   #   num_fewshot: [0]
-  #   icl_task_type: language_modeling
+  #   icl_task_type: multiple_choice
   #   continuation_delimiter: 'Answer: ' # this separates questions from answers
   #   has_categories: false
+  - label: winogrande
+    dataset_uri: local_data/winogrande.jsonl # ADD YOUR OWN DATASET URI
+    num_fewshot: [0]
+    icl_task_type: language_modeling
+    has_categories: false
   # - label: Jeopardy
   #   dataset_uri: local_data/jeopardy_all.jsonl # ADD YOUR OWN DATASET URI
   #   num_fewshot: [0]
