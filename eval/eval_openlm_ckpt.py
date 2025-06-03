@@ -49,7 +49,7 @@ def evaluate(model, tokenizer, cfg):
     # evaluators, logger_keys = build_icl_evaluators(
     #     cfg.icl_tasks, tokenizer, cfg.max_seq_len, cfg.device_eval_batch_size
     # )
-    icl_tasks = [dict(cfg.icl_tasks[:])]
+    icl_tasks = [dict(t) for t in cfg.icl_tasks]
     evaluators, logger_keys = build_icl_evaluators(
         icl_tasks, tokenizer, cfg.max_seq_len, cfg.device_eval_batch_size
     )
