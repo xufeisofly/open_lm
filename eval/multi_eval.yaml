@@ -70,8 +70,6 @@ icl_tasks:
     num_fewshot: [0]
     icl_task_type: language_modeling
     has_categories: false
-    generation_kwargs:
-      context_key: context_options
   # - label: Jeopardy
   #   dataset_uri: local_data/jeopardy_all.jsonl # ADD YOUR OWN DATASET URI
   #   num_fewshot: [0]
@@ -82,5 +80,3 @@ icl_tasks:
     num_fewshot: [0]
     icl_task_type: language_modeling
     has_categories: false
-    generation_kwargs:
-      context_key: context_options
