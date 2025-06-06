@@ -1,9 +1,9 @@
 epoch: 1.25T
 dataset: bigdata
-num_params: 1B
+num_params: 
 max_seq_len: 2048
 seed: 1
-precision: fp32
+precision: amp_bf16
 
 # Tokenizer
 tokenizer:
@@ -20,7 +20,7 @@ model:
 
 load_path: # Add your (optional) Composer checkpoint path here!
 
-device_eval_batch_size: 8
+device_eval_batch_size: 4
 
 # FSDP config for model sharding
 fsdp_config:
